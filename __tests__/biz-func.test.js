@@ -1,9 +1,8 @@
-import exampleTestFunction from '../src/js/biz-func.js';
+import GalacticDatabase from '../src/js/biz-func.js';
 
-describe('deckMessage', () => {
-  test('print message to console', () => {
-    expect(exampleTestFunction()).toEqual('hi there, from the deck');
+describe('GalacticDatabase', () => {
+  test('Create an instance of the galacticDatabase class', () => {
+    const sectorOneDataBase = new GalacticDatabase();
+    expect(sectorOneDataBase).toEqual({});
   });
 });
-
-// SOURCE REPO HAD BIZ LOGIC IN BOTH THE BIZ.JS AND TESTING FILES (AND THE WRONG IMPORT) -- CORRECTED HERE
