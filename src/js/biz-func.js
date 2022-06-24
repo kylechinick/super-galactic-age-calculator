@@ -5,3 +5,9 @@
 // };
 
 // export default exampleTestFunction;
+
+export default class GalacticDatabase {
+  constructor(propertyOne) {
+    this.propertyOne = propertyOne;
+  }
+}
