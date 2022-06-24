@@ -11,4 +11,7 @@ export default class GalacticDatabase {
   venusYearsConverter() {
     return this.databaseUserAge * 0.62;
   }
+  marsYearsConverter() {
+    return parseFloat((this.databaseUserAge * 1.88).toFixed(1));
+  }
 }
