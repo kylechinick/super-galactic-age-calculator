@@ -50,12 +50,12 @@ describe('GalacticDatabase', () => {
   //   );
   // });
 
-  // test('Log the converted average lifespan to the console', () => {
-  //   const sectorOneDataBase = new GalacticDatabase(20);
-  //   expect(sectorOneDataBase.yearsRemainingCalculator(20, 100, 'mars')).toEqual(
-  //     150.4
-  //   );
-  // });
+  test('Return the converted average lifespan', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.averageLifespanConverter(100, 'mars')).toEqual(
+      188
+    );
+  });
 
   // test('Return the planet-converted number of years remaining or exceeded against planet-converted average life-span of 100 Earth years', () => {
   //   const sectorOneDataBase = new GalacticDatabase(20);
