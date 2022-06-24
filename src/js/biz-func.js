@@ -5,8 +5,8 @@ export default class GalacticDatabase {
     this.databaseUserAge = databaseUserAge;
   }
 
-  mercuryYearsConverter() {
-    return this.databaseUserAge * 0.24;
+  mercuryYearsConverter(ageToConvert) {
+    return parseFloat((ageToConvert * 0.24).toFixed(1));
   }
 
   venusYearsConverter(ageToConvert) {
@@ -16,9 +16,10 @@ export default class GalacticDatabase {
   marsYearsConverter(ageToConvert) {
     return parseFloat((ageToConvert * 1.88).toFixed(1));
   }
-  // jupiterYearsConverter() {
-  //   return parseFloat((this.databaseUserAge * 11.86).toFixed(1));
-  // }
+
+  jupiterYearsConverter(ageToConvert) {
+    return parseFloat((ageToConvert * 11.86).toFixed(1));
+  }
 
   averageLifespanConverter(averageEarthLifespan, targetConversionPlanet) {
     let convertedAverageLifespan;
