@@ -28,10 +28,10 @@ describe('GalacticDatabase', () => {
     ).toEqual(37.6);
   });
 
-  // test('Return a number that is 11.86 times the value of databaseUserAge via the GalacticDatabase method jupiterYearsConverter()', () => {
-  //   const sectorOneDataBase = new GalacticDatabase(20);
-  //   expect(sectorOneDataBase.jupiterYearsConverter()).toEqual(237.2);
-  // });
+  test('Return a number that is 11.86 times the value of databaseUserAge via the GalacticDatabase method jupiterYearsConverter()', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.jupiterYearsConverter()).toEqual(237.2);
+  });
 
   // test('Return the number result of subtracting databaseUserAge from 100 via the GalacticDatabase method yearsRemainingCalculator()', () => {
   //   const sectorOneDataBase = new GalacticDatabase(20);
