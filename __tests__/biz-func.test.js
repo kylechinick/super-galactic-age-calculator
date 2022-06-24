@@ -30,4 +30,9 @@ describe('GalacticDatabase', () => {
     const sectorOneDataBase = new GalacticDatabase(20);
     expect(sectorOneDataBase.jupiterYearsConverter()).toEqual(237.2);
   });
+
+  test('Return the number result of subtracting databaseUserAge from 100 via the GalacticDatabase method yearsRemainingCalculator()', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.yearsRemainingCalculator()).toEqual(80);
+  });
 });
