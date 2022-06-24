@@ -18,10 +18,13 @@ export default class GalacticDatabase {
     return parseFloat((this.databaseUserAge * 11.86).toFixed(1));
   }
   yearsRemainingCalculator() {
-    if (parseFloat((100 - this.databaseUserAge).toFixed(1)) < 0) {
-      return Math.abs(parseFloat((100 - this.databaseUserAge).toFixed(1)));
+    const userAgeVsExpectancyAge = Math.abs(
+      parseFloat((100 - this.databaseUserAge).toFixed(1))
+    );
+    if (this.databaseUserAge < 100) {
+      return userAgeVsExpectancyAge;
     } else {
-      return parseFloat((100 - this.databaseUserAge).toFixed(1));
+      return `You have lived ${userAgeVsExpectancyAge} years past average life expectancy, keep it up!`;
     }
   }
 }
