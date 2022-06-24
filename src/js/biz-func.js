@@ -28,18 +28,19 @@ export default class GalacticDatabase {
   //   }
   // }
 
-  averageLifespanConverter(averageEarthLifespan, conversionPlanet) {
+  averageLifespanConverter(averageEarthLifespan, targetConversionPlanet) {
     let convertedAverageLifespan;
 
     switch (targetConversionPlanet) {
       case 'mars':
-        convertedAverageLifespan = this.marsYearsConverter(averageLifespan);
+        convertedAverageLifespan =
+          this.marsYearsConverter(averageEarthLifespan);
         break;
 
       default:
         break;
     }
-    console.log(convertedAverageLifespan);
+    return convertedAverageLifespan;
   }
 
   // yearsRemainingCalculator(targetAge, averageLifespan, targetConversionPlanet) {
