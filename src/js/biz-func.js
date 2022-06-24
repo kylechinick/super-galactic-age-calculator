@@ -29,7 +29,7 @@ export default class GalacticDatabase {
         convertedAverageLifespan =
           this.marsYearsConverter(averageEarthLifespan);
         break;
-
+      // TODO MUST COMPLETE ADDING OTHER CASES/PLANETS
       default:
         break;
     }
