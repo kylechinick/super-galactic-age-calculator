@@ -36,15 +36,15 @@ describe('GalacticDatabase', () => {
     expect(sectorOneDataBase.yearsRemainingCalculator()).toEqual(80);
   });
 
-  test('Return the number result of subtracting databaseUserAge from 100 via the GalacticDatabase method yearsRemainingCalculator() as a positive number if databaseUserAge is greater than 100 ', () => {
-    const sectorOneDataBase = new GalacticDatabase(120);
-    expect(sectorOneDataBase.yearsRemainingCalculator()).toEqual(20);
-  });
-
-  // test('Return a string stating the positive number of years above 100 that the user has lived based on databaseUserAge', () => {
+  // test('Return the number result of subtracting databaseUserAge from 100 via the GalacticDatabase method yearsRemainingCalculator() as a positive number if databaseUserAge is greater than 100 ', () => {
   //   const sectorOneDataBase = new GalacticDatabase(120);
-  //   expect(sectorOneDataBase.yearsRemainingCalculator()).toEqual(
-  //     'You have lived 20 years past average life expectancy, keep it up!'
-  //   );
+  //   expect(sectorOneDataBase.yearsRemainingCalculator()).toEqual(20);
   // });
+
+  test('Return a string stating the positive number of years above 100 that the user has lived based on databaseUserAge', () => {
+    const sectorOneDataBase = new GalacticDatabase(120);
+    expect(sectorOneDataBase.yearsRemainingCalculator()).toEqual(
+      'You have lived 20 years past average life expectancy, keep it up!'
+    );
+  });
 });
