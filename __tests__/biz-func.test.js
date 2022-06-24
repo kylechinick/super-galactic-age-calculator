@@ -11,3 +11,8 @@ describe('GalacticDatabase', () => {
     expect(sectorOneDataBase.databaseUserAge).toEqual(20);
   });
 });
+
+test('Return a number that is .24 times the value of databaseUserAge via the GalacticDatabase method mercuryYearsConverter', () => {
+  const sectorOneDataBase = new GalacticDatabase(20);
+  expect(sectorOneDataBase.mercuryYearsConverter()).toEqual(4.8);
+});
