@@ -38,6 +38,13 @@ describe('GalacticDatabase', () => {
   //   expect(sectorOneDataBase.yearsRemainingCalculator()).toEqual(80);
   // });
 
+  test('Return result of subtracting the planet-converted user age from the planet-converted average lifespan via the GalacticDatabase method yearsRemainingCalculator()', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.yearsRemainingCalculator(20, 100, 'mars')).toEqual(
+      150.4
+    );
+  });
+
   // // test('Return the number result of subtracting databaseUserAge from 100 via the GalacticDatabase method yearsRemainingCalculator() as a positive number if databaseUserAge is greater than 100 ', () => {
   // //   const sectorOneDataBase = new GalacticDatabase(120);
   // //   expect(sectorOneDataBase.yearsRemainingCalculator()).toEqual(20);
