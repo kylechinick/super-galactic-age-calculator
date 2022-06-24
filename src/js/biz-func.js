@@ -18,6 +18,10 @@ export default class GalacticDatabase {
     return parseFloat((this.databaseUserAge * 11.86).toFixed(1));
   }
   yearsRemainingCalculator() {
-    return parseFloat((100 - this.databaseUserAge).toFixed(1));
+    if (parseFloat((100 - this.databaseUserAge).toFixed(1)) < 0) {
+      return Math.abs(parseFloat((100 - this.databaseUserAge).toFixed(1)));
+    } else {
+      return parseFloat((100 - this.databaseUserAge).toFixed(1));
+    }
   }
 }
