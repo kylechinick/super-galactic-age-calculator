@@ -17,16 +17,6 @@ export default class GalacticDatabase {
   // jupiterYearsConverter() {
   //   return parseFloat((this.databaseUserAge * 11.86).toFixed(1));
   // }
-  // yearsRemainingCalculator() {
-  //   const userAgeVsExpectancyAge = Math.abs(
-  //     parseFloat((100 - this.databaseUserAge).toFixed(1))
-  //   );
-  //   if (this.databaseUserAge < 100) {
-  //     return userAgeVsExpectancyAge;
-  //   } else {
-  //     return `You have lived ${userAgeVsExpectancyAge} years past average life expectancy, keep it up!`;
-  //   }
-  // }
 
   averageLifespanConverter(averageEarthLifespan, targetConversionPlanet) {
     let convertedAverageLifespan;
@@ -43,42 +33,25 @@ export default class GalacticDatabase {
     return convertedAverageLifespan;
   }
 
-  // yearsRemainingCalculator(targetAge, averageLifespan, targetConversionPlanet) {
-  //   // GET CONVERTED AVERAGE LIFESPAN
-  //   let convertedAverageLifespan;
-
-  //   switch (targetConversionPlanet) {
-  //     case 'mars':
-  //       convertedAverageLifespan = this.marsYearsConverter(averageLifespan);
-  //       break;
-
-  //     default:
-  //       break;
-  //   }
-  //   console.log(convertedAverageLifespan);
-
-  //   // GET CONVERTED USER AGE
-  //   // RETURN CONVERTED USER AGE AS A NUMBER IF LOWER THAN CONVERTED AVERAGE LIFESPAN
-  //   // ELSE RETURN
-
-  //   const userAgeVsExpectancyAge = Math.abs(
-  //     parseFloat((100 - this.databaseUserAge).toFixed(1))
-  //   );
-  //   if (this.databaseUserAge < 100) {
-  //     return userAgeVsExpectancyAge;
-  //   } else {
-  //     return `You have lived ${userAgeVsExpectancyAge} years past average life expectancy, keep it up!`;
-  //   }
-  // }
-
-  yearsRemainingCalculator() {
-    const userAgeVsExpectancyAge = Math.abs(
-      parseFloat((100 - this.databaseUserAge).toFixed(1))
+  yearsRemainingCalculator(
+    targetAge,
+    averageEarthLifespan,
+    targetConversionPlanet
+  ) {
+    const convertedAverageLifespan = this.averageLifespanConverter(
+      averageEarthLifespan,
+      targetConversionPlanet
     );
-    if (this.databaseUserAge < 100) {
-      return userAgeVsExpectancyAge;
+
+    const convertedUserAge = this.marsYearsConverter(targetAge);
+
+    const userAgeVsAverageLifespan = Math.abs(
+      parseFloat((convertedAverageLifespan - convertedUserAge).toFixed(1))
+    );
+    if (convertedUserAge < convertedAverageLifespan) {
+      return userAgeVsAverageLifespan;
     } else {
-      return `You have lived ${userAgeVsExpectancyAge} years past average life expectancy, keep it up!`;
+      return `You have lived ${userAgeVsAverageLifespan} years past average life expectancy, keep it up!`;
     }
   }
 }
