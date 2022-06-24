@@ -16,10 +16,10 @@ describe('GalacticDatabase', () => {
   //   expect(sectorOneDataBase.mercuryYearsConverter()).toEqual(4.8);
   // });
 
-  // test('Return a number that is .62 times the value of databaseUserAge via the GalacticDatabase method venusYearsConverter', () => {
-  //   const sectorOneDataBase = new GalacticDatabase(20);
-  //   expect(sectorOneDataBase.venusYearsConverter()).toEqual(12.4);
-  // });
+  test('Return a number that is .62 times the value of databaseUserAge via the GalacticDatabase method venusYearsConverter', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.venusYearsConverter(20)).toEqual(12.4);
+  });
 
   test('Return a number that is 1.88 times the value of databaseUserAge via the GalacticDatabase method marsYearsConverter', () => {
     const sectorOneDataBase = new GalacticDatabase(20);
