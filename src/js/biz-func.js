@@ -5,9 +5,10 @@ export default class GalacticDatabase {
     this.databaseUserAge = databaseUserAge;
   }
 
-  // mercuryYearsConverter() {
-  //   return this.databaseUserAge * 0.24;
-  // }
+  mercuryYearsConverter() {
+    return this.databaseUserAge * 0.24;
+  }
+
   venusYearsConverter(ageToConvert) {
     return parseFloat((ageToConvert * 0.62).toFixed(1));
   }
