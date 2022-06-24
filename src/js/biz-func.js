@@ -17,4 +17,7 @@ export default class GalacticDatabase {
   jupiterYearsConverter() {
     return parseFloat((this.databaseUserAge * 11.86).toFixed(1));
   }
+  yearsRemainingCalculator() {
+    return parseFloat((100 - this.databaseUserAge).toFixed(1));
+  }
 }
