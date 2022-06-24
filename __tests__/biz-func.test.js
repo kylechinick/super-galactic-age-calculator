@@ -20,4 +20,9 @@ describe('GalacticDatabase', () => {
     const sectorOneDataBase = new GalacticDatabase(20);
     expect(sectorOneDataBase.venusYearsConverter()).toEqual(12.4);
   });
+
+  test('Return a number that is 1.88 times the value of databaseUserAge via the GalacticDatabase method marsYearsConverter', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.marsYearsConverter()).toEqual(37.6);
+  });
 });
