@@ -47,4 +47,9 @@ describe('GalacticDatabase', () => {
       'You have lived 20 years past average life expectancy, keep it up!'
     );
   });
+
+  test('Return the planet-converted number of years remaining or exeeded against planet-converted average life-span of 100 Earth years', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.yearsRemainingCalculator(mars)).toEqual(150.4);
+  });
 });
