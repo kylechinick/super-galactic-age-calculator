@@ -8,9 +8,10 @@ export default class GalacticDatabase {
   // mercuryYearsConverter() {
   //   return this.databaseUserAge * 0.24;
   // }
-  // venusYearsConverter() {
-  //   return this.databaseUserAge * 0.62;
-  // }
+  venusYearsConverter(ageToConvert) {
+    return parseFloat((ageToConvert * 0.62).toFixed(1));
+  }
+
   marsYearsConverter(ageToConvert) {
     return parseFloat((ageToConvert * 1.88).toFixed(1));
   }
