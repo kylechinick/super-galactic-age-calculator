@@ -54,10 +54,28 @@ describe('GalacticDatabase', () => {
     );
   });
 
-  test('Return the converted average lifespan', () => {
+  test('Return the converted average lifespan for mercury', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.averageLifespanConverter(100, 'mercury')).toEqual(
+      24
+    );
+  });
+  test('Return the converted average lifespan for venus', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.averageLifespanConverter(100, 'venus')).toEqual(
+      62
+    );
+  });
+  test('Return the converted average lifespan for mars', () => {
     const sectorOneDataBase = new GalacticDatabase(20);
     expect(sectorOneDataBase.averageLifespanConverter(100, 'mars')).toEqual(
       188
+    );
+  });
+  test('Return the converted average lifespan for jupiter', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.averageLifespanConverter(100, 'jupiter')).toEqual(
+      1186
     );
   });
 
