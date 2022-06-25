@@ -25,11 +25,23 @@ export default class GalacticDatabase {
     let convertedAverageLifespan;
 
     switch (targetConversionPlanet) {
+      case 'mercury':
+        convertedAverageLifespan =
+          this.mercuryYearsConverter(averageEarthLifespan);
+        break;
+      case 'venus':
+        convertedAverageLifespan =
+          this.venusYearsConverter(averageEarthLifespan);
+        break;
       case 'mars':
         convertedAverageLifespan =
           this.marsYearsConverter(averageEarthLifespan);
         break;
-      // TODO MUST COMPLETE ADDING OTHER CASES/PLANETS
+      case 'jupiter':
+        convertedAverageLifespan =
+          this.jupiterYearsConverter(averageEarthLifespan);
+        break;
+
       default:
         return 'Average lifepan conversion failed to execute properly';
     }
