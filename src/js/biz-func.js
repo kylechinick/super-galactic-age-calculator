@@ -31,7 +31,7 @@ export default class GalacticDatabase {
         break;
       // TODO MUST COMPLETE ADDING OTHER CASES/PLANETS
       default:
-        break;
+        return 'Average lifepan conversion failed to execute properly';
     }
     return convertedAverageLifespan;
   }
