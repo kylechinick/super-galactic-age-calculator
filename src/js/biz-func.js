@@ -41,7 +41,7 @@ export default class GalacticDatabase {
         break;
 
       default:
-        return 'Average lifepan conversion failed to execute properly';
+        return 'Average lifespan conversion failed to execute properly';
     }
     return convertedAverageLifespan;
   }

@@ -82,7 +82,7 @@ describe('GalacticDatabase', () => {
   test('Return error if no case is matched', () => {
     const sectorOneDataBase = new GalacticDatabase(20);
     expect(sectorOneDataBase.averageLifespanConverter(100, '')).toEqual(
-      'Average lifepan conversion failed to execute properly'
+      'Average lifespan conversion failed to execute properly'
     );
   });
 });
