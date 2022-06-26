@@ -8,5 +8,20 @@
   </head>
   <body>
     <h1>Super Galactic Age Calculator</h1>
+    <form>
+      <label for="user-age-input">
+        Enter your age in Earth years to display your age according to other
+        planets' solar year:
+      </label>
+      <input type="number" name="user-age-input" id="user-age-input" />
+      <button type="submit" id="user-age-submit-button">
+        Calculate Solar Ages
+      </button>
+    </form>
+    <h2>Age per Planet's Solar Year</h2>
+    <p>Mercury: <span class="age-output" id="mercury-age-output"></span></p>
+    <p>Venus: <span class="age-output" id="venus-age-output"></span></p>
+    <p>Mars: <span class="age-output" id="mars-age-output"></span></p>
+    <p>Jupiter: <span class="age-output" id="jupiter-age-output"></span></p>
   </body>
 </html>
