@@ -23,6 +23,9 @@ export default class GalacticDatabase {
     let convertedAverageLifespan;
 
     switch (targetConversionPlanet) {
+      case 'earth':
+        convertedAverageLifespan = averageEarthLifespan;
+        break;
       case 'mercury':
         convertedAverageLifespan =
           this.mercuryYearsConverter(averageEarthLifespan);
@@ -56,7 +59,33 @@ export default class GalacticDatabase {
       targetConversionPlanet
     );
 
-    const convertedUserAge = this.marsYearsConverter(targetAge);
+    let convertedUserAge;
+    switch (targetConversionPlanet) {
+      case 'earth':
+        convertedUserAge = targetAge;
+        break;
+      case 'mercury':
+        convertedUserAge = this.mercuryYearsConverter(targetAge);
+        break;
+      case 'venus':
+        convertedUserAge = this.venusYearsConverter(targetAge);
+        break;
+      case 'mars':
+        convertedUserAge = this.marsYearsConverter(targetAge);
+        break;
+      case 'jupiter':
+        convertedUserAge = this.jupiterYearsConverter(targetAge);
+        break;
+
+      default:
+        return 'Average lifespan conversion failed to execute properly';
+    }
+
+    // const convertedUserAge = this.earYearsConverter(targetAge);
+    // const convertedUserAge = this.marsYearsConverter(targetAge);
+    // const convertedUserAge = this.marsYearsConverter(targetAge);
+    // const convertedUserAge = this.marsYearsConverter(targetAge);
+    // const convertedUserAge = this.marsYearsConverter(targetAge);
 
     const userAgeVsAverageLifespan = Math.abs(
       parseFloat((convertedAverageLifespan - convertedUserAge).toFixed(1))
