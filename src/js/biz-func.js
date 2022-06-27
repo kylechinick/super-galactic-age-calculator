@@ -78,14 +78,8 @@ export default class GalacticDatabase {
         break;
 
       default:
-        return 'Average lifespan conversion failed to execute properly';
+        return 'User age conversion failed to execute properly';
     }
-
-    // const convertedUserAge = this.earYearsConverter(targetAge);
-    // const convertedUserAge = this.marsYearsConverter(targetAge);
-    // const convertedUserAge = this.marsYearsConverter(targetAge);
-    // const convertedUserAge = this.marsYearsConverter(targetAge);
-    // const convertedUserAge = this.marsYearsConverter(targetAge);
 
     const userAgeVsAverageLifespan = Math.abs(
       parseFloat((convertedAverageLifespan - convertedUserAge).toFixed(1))
