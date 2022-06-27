@@ -45,6 +45,31 @@ describe('GalacticDatabase', () => {
   //   expect(sectorOneDataBase.yearsRemainingCalculator()).toEqual(20);
   // });
 
+  test('Return result of subtracting the planet-converted user age from the planet-converted average lifespan via the GalacticDatabase method yearsRemainingCalculator()', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(
+      sectorOneDataBase.yearsRemainingCalculator(20, 100, 'earth')
+    ).toEqual(80);
+  });
+  test('Return result of subtracting the planet-converted user age from the planet-converted average lifespan via the GalacticDatabase method yearsRemainingCalculator()', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(
+      sectorOneDataBase.yearsRemainingCalculator(20, 100, 'mercury')
+    ).toEqual(19.2);
+  });
+  test('Return result of subtracting the planet-converted user age from the planet-converted average lifespan via the GalacticDatabase method yearsRemainingCalculator()', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(
+      sectorOneDataBase.yearsRemainingCalculator(20, 100, 'venus')
+    ).toEqual(49.6);
+  });
+  test('Return result of subtracting the planet-converted user age from the planet-converted average lifespan via the GalacticDatabase method yearsRemainingCalculator()', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(
+      sectorOneDataBase.yearsRemainingCalculator(20, 100, 'jupiter')
+    ).toEqual(948.8);
+  });
+
   test('Return a string stating the positive number of years above 100 that the user has lived based on databaseUserAge', () => {
     const sectorOneDataBase = new GalacticDatabase(120);
     expect(
@@ -83,6 +108,12 @@ describe('GalacticDatabase', () => {
     const sectorOneDataBase = new GalacticDatabase(20);
     expect(sectorOneDataBase.averageLifespanConverter(100, '')).toEqual(
       'Average lifespan conversion failed to execute properly'
+    );
+  });
+  test('Return error if no case is matched', () => {
+    const sectorOneDataBase = new GalacticDatabase(20);
+    expect(sectorOneDataBase.yearsRemainingCalculator(20, '')).toEqual(
+      'User age conversion failed to execute properly'
     );
   });
 });
